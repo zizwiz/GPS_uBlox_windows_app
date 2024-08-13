@@ -24,7 +24,7 @@ namespace uBlox_GPS
         private SerialPort comport = new SerialPort();
 
         // Various colors for logging info
-        private Color[] LogMsgTypeColor = { Color.Blue, Color.LightGreen, Color.White, Color.Orange, Color.Red, Color.Purple };
+        public static Color[] LogMsgTypeColor = { Color.Yellow, Color.LightGreen, Color.White, Color.Orange, Color.Red, Color.Purple };
 
         // Temp holder for whether a key was pressed
         private bool KeyHandled = false;
@@ -34,7 +34,7 @@ namespace uBlox_GPS
         /// <summary> Log data to the terminal window. </summary>
         /// <param name="msgtype"> The type of message to be written. </param>
         /// <param name="msg"> The string containing the message to be shown. </param>
-        private void Log(LogMsgType msgtype, string msg, RichTextBox myRichTextBox)
+        public static void Log(LogMsgType msgtype, string msg, RichTextBox myRichTextBox)
         {
             myRichTextBox.Invoke(new EventHandler(delegate
             {

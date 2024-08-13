@@ -315,7 +315,13 @@ namespace uBlox_GPS
             Log(LogMsgType.Outgoing, "\n" + ByteArrayToHexString(data) + "\n", rchtxbx_output);
         }
 
-       
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tabControl1.SelectedTab.Name == "tab_ubx")
+            {
+                rdobtn_hex.Checked = true;
+            }
+        }
     }
 
 }

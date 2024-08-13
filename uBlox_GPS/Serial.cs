@@ -4,6 +4,8 @@ using System.Linq;
 using System.IO.Ports;
 using System.Windows.Forms;
 using System.Collections.Generic;
+using uBlox_GPS.ubx;
+
 #endregion
 
 namespace uBlox_GPS
@@ -87,7 +89,7 @@ namespace uBlox_GPS
 
             // This method will be called when there is data waiting in the port's buffer
 
-            // Determain which mode (string or binary) the user is in
+            // Determine which mode (string or binary) the user is in
             if (CurrentDataMode == DataMode.Text)
             {
                 // Read all the data waiting in the buffer
@@ -117,7 +119,16 @@ namespace uBlox_GPS
                 }
                 else
                 {
-                    Log(LogMsgType.Incoming, ByteArrayToHexString(buffer), rchtxbx_output);
+                    string myReply = ByteArrayToHexString(buffer);
+
+                    if (myReply.Substring(0, 5) == "B5 62") //ubx config reply - note space in string
+                    {
+                        deCipher_ubx.unpack(myReply.Replace(" ",""), rchtxbx_ubx_output);
+                    }
+                    else
+                    {
+                         Log(LogMsgType.Incoming, ByteArrayToHexString(buffer), rchtxbx_output);
+                    }
                 }
 
             }

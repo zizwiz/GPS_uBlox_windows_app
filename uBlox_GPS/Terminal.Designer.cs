@@ -115,6 +115,13 @@ namespace uBlox_GPS
             this.rdobtn_ubx_set_msg_config = new System.Windows.Forms.RadioButton();
             this.rdobtn_ubx_get_msg_config = new System.Windows.Forms.RadioButton();
             this.grpbx_msgconfig_ID = new System.Windows.Forms.GroupBox();
+            this.rdobtn_ubx_VLW_config = new System.Windows.Forms.RadioButton();
+            this.rdobtn_ubx_THS_config = new System.Windows.Forms.RadioButton();
+            this.rdobtn_ubx_GNS_config = new System.Windows.Forms.RadioButton();
+            this.rdobtn_ubx_DTM_config = new System.Windows.Forms.RadioButton();
+            this.rdobtn_ubx_GBS_config = new System.Windows.Forms.RadioButton();
+            this.rdobtn_ubx_ZDA_config = new System.Windows.Forms.RadioButton();
+            this.rdobtn_ubx_GST_config = new System.Windows.Forms.RadioButton();
             this.rdobtn_ubx_VTG_config = new System.Windows.Forms.RadioButton();
             this.rdobtn_ubx_GLL_config = new System.Windows.Forms.RadioButton();
             this.rdobtn_ubx_GSA_config = new System.Windows.Forms.RadioButton();
@@ -125,13 +132,6 @@ namespace uBlox_GPS
             this.cmbobx_ubx_commands = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.rdobtn_ubx_GST_config = new System.Windows.Forms.RadioButton();
-            this.rdobtn_ubx_ZDA_config = new System.Windows.Forms.RadioButton();
-            this.rdobtn_ubx_GBS_config = new System.Windows.Forms.RadioButton();
-            this.rdobtn_ubx_DTM_config = new System.Windows.Forms.RadioButton();
-            this.rdobtn_ubx_GNS_config = new System.Windows.Forms.RadioButton();
-            this.rdobtn_ubx_THS_config = new System.Windows.Forms.RadioButton();
-            this.rdobtn_ubx_VLW_config = new System.Windows.Forms.RadioButton();
             this.gbMode.SuspendLayout();
             this.gbPortSettings.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -645,7 +645,7 @@ namespace uBlox_GPS
             // btn_close
             // 
             this.btn_close.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_close.Location = new System.Drawing.Point(1286, 5);
+            this.btn_close.Location = new System.Drawing.Point(1349, 5);
             this.btn_close.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_close.Name = "btn_close";
             this.btn_close.Size = new System.Drawing.Size(112, 44);
@@ -681,8 +681,9 @@ namespace uBlox_GPS
             this.tabControl1.Location = new System.Drawing.Point(3, 3);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1407, 621);
+            this.tabControl1.Size = new System.Drawing.Size(1470, 621);
             this.tabControl1.TabIndex = 15;
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // tab_connection
             // 
@@ -982,7 +983,7 @@ namespace uBlox_GPS
             this.tab_ubx.Location = new System.Drawing.Point(4, 29);
             this.tab_ubx.Name = "tab_ubx";
             this.tab_ubx.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_ubx.Size = new System.Drawing.Size(1399, 588);
+            this.tab_ubx.Size = new System.Drawing.Size(1462, 588);
             this.tab_ubx.TabIndex = 3;
             this.tab_ubx.Text = "UBX Comms";
             this.tab_ubx.UseVisualStyleBackColor = true;
@@ -990,25 +991,25 @@ namespace uBlox_GPS
             // tableLayoutPanel4
             // 
             this.tableLayoutPanel4.ColumnCount = 2;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
             this.tableLayoutPanel4.Controls.Add(this.panel3, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.panel6, 0, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(1393, 550);
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(1456, 550);
             this.tableLayoutPanel4.TabIndex = 2;
             // 
             // panel3
             // 
             this.panel3.Controls.Add(this.rchtxbx_ubx_output);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(699, 3);
+            this.panel3.Location = new System.Drawing.Point(585, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(691, 544);
+            this.panel3.Size = new System.Drawing.Size(868, 544);
             this.panel3.TabIndex = 0;
             // 
             // rchtxbx_ubx_output
@@ -1017,7 +1018,7 @@ namespace uBlox_GPS
             this.rchtxbx_ubx_output.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rchtxbx_ubx_output.Location = new System.Drawing.Point(0, 0);
             this.rchtxbx_ubx_output.Name = "rchtxbx_ubx_output";
-            this.rchtxbx_ubx_output.Size = new System.Drawing.Size(691, 544);
+            this.rchtxbx_ubx_output.Size = new System.Drawing.Size(868, 544);
             this.rchtxbx_ubx_output.TabIndex = 0;
             this.rchtxbx_ubx_output.Text = "";
             // 
@@ -1028,7 +1029,7 @@ namespace uBlox_GPS
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(3, 3);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(690, 544);
+            this.panel6.Size = new System.Drawing.Size(576, 544);
             this.panel6.TabIndex = 1;
             // 
             // grpbx_ubx_msg_config
@@ -1039,7 +1040,7 @@ namespace uBlox_GPS
             this.grpbx_ubx_msg_config.Controls.Add(this.btn_ubx_msg_config_go);
             this.grpbx_ubx_msg_config.Controls.Add(this.groupBox3);
             this.grpbx_ubx_msg_config.Controls.Add(this.grpbx_msgconfig_ID);
-            this.grpbx_ubx_msg_config.Location = new System.Drawing.Point(28, 191);
+            this.grpbx_ubx_msg_config.Location = new System.Drawing.Point(3, 72);
             this.grpbx_ubx_msg_config.Name = "grpbx_ubx_msg_config";
             this.grpbx_ubx_msg_config.Size = new System.Drawing.Size(606, 332);
             this.grpbx_ubx_msg_config.TabIndex = 0;
@@ -1135,6 +1136,83 @@ namespace uBlox_GPS
             this.grpbx_msgconfig_ID.Size = new System.Drawing.Size(559, 103);
             this.grpbx_msgconfig_ID.TabIndex = 6;
             this.grpbx_msgconfig_ID.TabStop = false;
+            // 
+            // rdobtn_ubx_VLW_config
+            // 
+            this.rdobtn_ubx_VLW_config.AutoSize = true;
+            this.rdobtn_ubx_VLW_config.Location = new System.Drawing.Point(472, 57);
+            this.rdobtn_ubx_VLW_config.Name = "rdobtn_ubx_VLW_config";
+            this.rdobtn_ubx_VLW_config.Size = new System.Drawing.Size(69, 24);
+            this.rdobtn_ubx_VLW_config.TabIndex = 13;
+            this.rdobtn_ubx_VLW_config.Tag = "0F";
+            this.rdobtn_ubx_VLW_config.Text = "VLW";
+            this.rdobtn_ubx_VLW_config.UseVisualStyleBackColor = true;
+            // 
+            // rdobtn_ubx_THS_config
+            // 
+            this.rdobtn_ubx_THS_config.AutoSize = true;
+            this.rdobtn_ubx_THS_config.Location = new System.Drawing.Point(403, 57);
+            this.rdobtn_ubx_THS_config.Name = "rdobtn_ubx_THS_config";
+            this.rdobtn_ubx_THS_config.Size = new System.Drawing.Size(66, 24);
+            this.rdobtn_ubx_THS_config.TabIndex = 12;
+            this.rdobtn_ubx_THS_config.Tag = "0E";
+            this.rdobtn_ubx_THS_config.Text = "THS";
+            this.rdobtn_ubx_THS_config.UseVisualStyleBackColor = true;
+            // 
+            // rdobtn_ubx_GNS_config
+            // 
+            this.rdobtn_ubx_GNS_config.AutoSize = true;
+            this.rdobtn_ubx_GNS_config.Location = new System.Drawing.Point(327, 57);
+            this.rdobtn_ubx_GNS_config.Name = "rdobtn_ubx_GNS_config";
+            this.rdobtn_ubx_GNS_config.Size = new System.Drawing.Size(69, 24);
+            this.rdobtn_ubx_GNS_config.TabIndex = 11;
+            this.rdobtn_ubx_GNS_config.Tag = "0D";
+            this.rdobtn_ubx_GNS_config.Text = "GNS";
+            this.rdobtn_ubx_GNS_config.UseVisualStyleBackColor = true;
+            // 
+            // rdobtn_ubx_DTM_config
+            // 
+            this.rdobtn_ubx_DTM_config.AutoSize = true;
+            this.rdobtn_ubx_DTM_config.Location = new System.Drawing.Point(250, 57);
+            this.rdobtn_ubx_DTM_config.Name = "rdobtn_ubx_DTM_config";
+            this.rdobtn_ubx_DTM_config.Size = new System.Drawing.Size(68, 24);
+            this.rdobtn_ubx_DTM_config.TabIndex = 10;
+            this.rdobtn_ubx_DTM_config.Tag = "0A";
+            this.rdobtn_ubx_DTM_config.Text = "DTM";
+            this.rdobtn_ubx_DTM_config.UseVisualStyleBackColor = true;
+            // 
+            // rdobtn_ubx_GBS_config
+            // 
+            this.rdobtn_ubx_GBS_config.AutoSize = true;
+            this.rdobtn_ubx_GBS_config.Location = new System.Drawing.Point(173, 57);
+            this.rdobtn_ubx_GBS_config.Name = "rdobtn_ubx_GBS_config";
+            this.rdobtn_ubx_GBS_config.Size = new System.Drawing.Size(69, 24);
+            this.rdobtn_ubx_GBS_config.TabIndex = 9;
+            this.rdobtn_ubx_GBS_config.Tag = "09";
+            this.rdobtn_ubx_GBS_config.Text = "GBS";
+            this.rdobtn_ubx_GBS_config.UseVisualStyleBackColor = true;
+            // 
+            // rdobtn_ubx_ZDA_config
+            // 
+            this.rdobtn_ubx_ZDA_config.AutoSize = true;
+            this.rdobtn_ubx_ZDA_config.Location = new System.Drawing.Point(95, 57);
+            this.rdobtn_ubx_ZDA_config.Name = "rdobtn_ubx_ZDA_config";
+            this.rdobtn_ubx_ZDA_config.Size = new System.Drawing.Size(67, 24);
+            this.rdobtn_ubx_ZDA_config.TabIndex = 8;
+            this.rdobtn_ubx_ZDA_config.Tag = "08";
+            this.rdobtn_ubx_ZDA_config.Text = "ZDA";
+            this.rdobtn_ubx_ZDA_config.UseVisualStyleBackColor = true;
+            // 
+            // rdobtn_ubx_GST_config
+            // 
+            this.rdobtn_ubx_GST_config.AutoSize = true;
+            this.rdobtn_ubx_GST_config.Location = new System.Drawing.Point(19, 57);
+            this.rdobtn_ubx_GST_config.Name = "rdobtn_ubx_GST_config";
+            this.rdobtn_ubx_GST_config.Size = new System.Drawing.Size(67, 24);
+            this.rdobtn_ubx_GST_config.TabIndex = 7;
+            this.rdobtn_ubx_GST_config.Tag = "07";
+            this.rdobtn_ubx_GST_config.Text = "GST";
+            this.rdobtn_ubx_GST_config.UseVisualStyleBackColor = true;
             // 
             // rdobtn_ubx_VTG_config
             // 
@@ -1237,7 +1315,7 @@ namespace uBlox_GPS
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1413, 687);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1476, 687);
             this.tableLayoutPanel1.TabIndex = 16;
             // 
             // tableLayoutPanel2
@@ -1258,91 +1336,14 @@ namespace uBlox_GPS
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1407, 54);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1470, 54);
             this.tableLayoutPanel2.TabIndex = 16;
-            // 
-            // rdobtn_ubx_GST_config
-            // 
-            this.rdobtn_ubx_GST_config.AutoSize = true;
-            this.rdobtn_ubx_GST_config.Location = new System.Drawing.Point(19, 57);
-            this.rdobtn_ubx_GST_config.Name = "rdobtn_ubx_GST_config";
-            this.rdobtn_ubx_GST_config.Size = new System.Drawing.Size(67, 24);
-            this.rdobtn_ubx_GST_config.TabIndex = 7;
-            this.rdobtn_ubx_GST_config.Tag = "07";
-            this.rdobtn_ubx_GST_config.Text = "GST";
-            this.rdobtn_ubx_GST_config.UseVisualStyleBackColor = true;
-            // 
-            // rdobtn_ubx_ZDA_config
-            // 
-            this.rdobtn_ubx_ZDA_config.AutoSize = true;
-            this.rdobtn_ubx_ZDA_config.Location = new System.Drawing.Point(95, 57);
-            this.rdobtn_ubx_ZDA_config.Name = "rdobtn_ubx_ZDA_config";
-            this.rdobtn_ubx_ZDA_config.Size = new System.Drawing.Size(67, 24);
-            this.rdobtn_ubx_ZDA_config.TabIndex = 8;
-            this.rdobtn_ubx_ZDA_config.Tag = "08";
-            this.rdobtn_ubx_ZDA_config.Text = "ZDA";
-            this.rdobtn_ubx_ZDA_config.UseVisualStyleBackColor = true;
-            // 
-            // rdobtn_ubx_GBS_config
-            // 
-            this.rdobtn_ubx_GBS_config.AutoSize = true;
-            this.rdobtn_ubx_GBS_config.Location = new System.Drawing.Point(173, 57);
-            this.rdobtn_ubx_GBS_config.Name = "rdobtn_ubx_GBS_config";
-            this.rdobtn_ubx_GBS_config.Size = new System.Drawing.Size(69, 24);
-            this.rdobtn_ubx_GBS_config.TabIndex = 9;
-            this.rdobtn_ubx_GBS_config.Tag = "09";
-            this.rdobtn_ubx_GBS_config.Text = "GBS";
-            this.rdobtn_ubx_GBS_config.UseVisualStyleBackColor = true;
-            // 
-            // rdobtn_ubx_DTM_config
-            // 
-            this.rdobtn_ubx_DTM_config.AutoSize = true;
-            this.rdobtn_ubx_DTM_config.Location = new System.Drawing.Point(250, 57);
-            this.rdobtn_ubx_DTM_config.Name = "rdobtn_ubx_DTM_config";
-            this.rdobtn_ubx_DTM_config.Size = new System.Drawing.Size(68, 24);
-            this.rdobtn_ubx_DTM_config.TabIndex = 10;
-            this.rdobtn_ubx_DTM_config.Tag = "0A";
-            this.rdobtn_ubx_DTM_config.Text = "DTM";
-            this.rdobtn_ubx_DTM_config.UseVisualStyleBackColor = true;
-            // 
-            // rdobtn_ubx_GNS_config
-            // 
-            this.rdobtn_ubx_GNS_config.AutoSize = true;
-            this.rdobtn_ubx_GNS_config.Location = new System.Drawing.Point(327, 57);
-            this.rdobtn_ubx_GNS_config.Name = "rdobtn_ubx_GNS_config";
-            this.rdobtn_ubx_GNS_config.Size = new System.Drawing.Size(69, 24);
-            this.rdobtn_ubx_GNS_config.TabIndex = 11;
-            this.rdobtn_ubx_GNS_config.Tag = "0D";
-            this.rdobtn_ubx_GNS_config.Text = "GNS";
-            this.rdobtn_ubx_GNS_config.UseVisualStyleBackColor = true;
-            // 
-            // rdobtn_ubx_THS_config
-            // 
-            this.rdobtn_ubx_THS_config.AutoSize = true;
-            this.rdobtn_ubx_THS_config.Location = new System.Drawing.Point(403, 57);
-            this.rdobtn_ubx_THS_config.Name = "rdobtn_ubx_THS_config";
-            this.rdobtn_ubx_THS_config.Size = new System.Drawing.Size(66, 24);
-            this.rdobtn_ubx_THS_config.TabIndex = 12;
-            this.rdobtn_ubx_THS_config.Tag = "0E";
-            this.rdobtn_ubx_THS_config.Text = "THS";
-            this.rdobtn_ubx_THS_config.UseVisualStyleBackColor = true;
-            // 
-            // rdobtn_ubx_VLW_config
-            // 
-            this.rdobtn_ubx_VLW_config.AutoSize = true;
-            this.rdobtn_ubx_VLW_config.Location = new System.Drawing.Point(472, 57);
-            this.rdobtn_ubx_VLW_config.Name = "rdobtn_ubx_VLW_config";
-            this.rdobtn_ubx_VLW_config.Size = new System.Drawing.Size(69, 24);
-            this.rdobtn_ubx_VLW_config.TabIndex = 13;
-            this.rdobtn_ubx_VLW_config.Tag = "0F";
-            this.rdobtn_ubx_VLW_config.Text = "VLW";
-            this.rdobtn_ubx_VLW_config.UseVisualStyleBackColor = true;
             // 
             // frmTerminal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1413, 687);
+            this.ClientSize = new System.Drawing.Size(1476, 687);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
