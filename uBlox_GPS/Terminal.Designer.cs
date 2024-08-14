@@ -645,7 +645,7 @@ namespace uBlox_GPS
             // btn_close
             // 
             this.btn_close.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_close.Location = new System.Drawing.Point(1349, 5);
+            this.btn_close.Location = new System.Drawing.Point(1359, 5);
             this.btn_close.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_close.Name = "btn_close";
             this.btn_close.Size = new System.Drawing.Size(112, 44);
@@ -681,7 +681,7 @@ namespace uBlox_GPS
             this.tabControl1.Location = new System.Drawing.Point(3, 3);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1470, 621);
+            this.tabControl1.Size = new System.Drawing.Size(1480, 621);
             this.tabControl1.TabIndex = 15;
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
@@ -691,7 +691,7 @@ namespace uBlox_GPS
             this.tab_connection.Location = new System.Drawing.Point(4, 29);
             this.tab_connection.Name = "tab_connection";
             this.tab_connection.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_connection.Size = new System.Drawing.Size(1399, 588);
+            this.tab_connection.Size = new System.Drawing.Size(1472, 588);
             this.tab_connection.TabIndex = 0;
             this.tab_connection.Text = "Connection";
             this.tab_connection.UseVisualStyleBackColor = true;
@@ -706,7 +706,7 @@ namespace uBlox_GPS
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1393, 582);
+            this.panel1.Size = new System.Drawing.Size(1466, 582);
             this.panel1.TabIndex = 0;
             // 
             // tab_output
@@ -983,7 +983,7 @@ namespace uBlox_GPS
             this.tab_ubx.Location = new System.Drawing.Point(4, 29);
             this.tab_ubx.Name = "tab_ubx";
             this.tab_ubx.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_ubx.Size = new System.Drawing.Size(1462, 588);
+            this.tab_ubx.Size = new System.Drawing.Size(1472, 588);
             this.tab_ubx.TabIndex = 3;
             this.tab_ubx.Text = "UBX Comms";
             this.tab_ubx.UseVisualStyleBackColor = true;
@@ -1000,16 +1000,16 @@ namespace uBlox_GPS
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(1456, 550);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(1466, 550);
             this.tableLayoutPanel4.TabIndex = 2;
             // 
             // panel3
             // 
             this.panel3.Controls.Add(this.rchtxbx_ubx_output);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(585, 3);
+            this.panel3.Location = new System.Drawing.Point(589, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(868, 544);
+            this.panel3.Size = new System.Drawing.Size(874, 544);
             this.panel3.TabIndex = 0;
             // 
             // rchtxbx_ubx_output
@@ -1018,7 +1018,7 @@ namespace uBlox_GPS
             this.rchtxbx_ubx_output.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rchtxbx_ubx_output.Location = new System.Drawing.Point(0, 0);
             this.rchtxbx_ubx_output.Name = "rchtxbx_ubx_output";
-            this.rchtxbx_ubx_output.Size = new System.Drawing.Size(868, 544);
+            this.rchtxbx_ubx_output.Size = new System.Drawing.Size(874, 544);
             this.rchtxbx_ubx_output.TabIndex = 0;
             this.rchtxbx_ubx_output.Text = "";
             // 
@@ -1029,7 +1029,7 @@ namespace uBlox_GPS
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(3, 3);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(576, 544);
+            this.panel6.Size = new System.Drawing.Size(580, 544);
             this.panel6.TabIndex = 1;
             // 
             // grpbx_ubx_msg_config
@@ -1315,7 +1315,7 @@ namespace uBlox_GPS
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1476, 687);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1486, 687);
             this.tableLayoutPanel1.TabIndex = 16;
             // 
             // tableLayoutPanel2
@@ -1336,14 +1336,14 @@ namespace uBlox_GPS
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1470, 54);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1480, 54);
             this.tableLayoutPanel2.TabIndex = 16;
             // 
             // frmTerminal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1476, 687);
+            this.ClientSize = new System.Drawing.Size(1486, 687);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);

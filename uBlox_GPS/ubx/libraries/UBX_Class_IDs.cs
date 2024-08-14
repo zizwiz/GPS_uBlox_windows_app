@@ -1,13 +1,11 @@
-﻿using System.Windows.Forms;
-
-namespace uBlox_GPS.ubx
+﻿namespace uBlox_GPS.ubx
 {
     partial class deCipher_ubx
     {
 
-        private static string GetUBXClassID(string myData)
+        private static string GetUBXClass(string myData)
         {
-            string myAnswer = "Class ID = ";
+            string myAnswer = "Class = ";
 
             switch (myData)
             {

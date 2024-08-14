@@ -111,7 +111,10 @@
     <Compile Include="Serial.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ubx\ACK_NAK_05.cs" />
     <Compile Include="ubx\deCipher_ubx.cs" />
+    <Compile Include="ubx\libraries\NMEA_ Proprietary_msg.cs" />
+    <Compile Include="ubx\libraries\NMEA_Standard_msg.cs" />
     <Compile Include="ubx\libraries\UBX_Class_IDs.cs" />
     <Compile Include="ubx\UBX_GetSetConfiguration.cs">
       <SubType>Form</SubType>

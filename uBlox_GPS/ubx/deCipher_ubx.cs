@@ -51,28 +51,41 @@ namespace uBlox_GPS.ubx
                 decipheredData += myData.Substring(0, 2) + " = UBX Sync Character 1\r";
                 decipheredData += myData.Substring(2, 2) + " = UBX Sync Character 2\r";
 
-                // Class IDs, there are two of them
+                // Class 
                 data = myData.Substring(4, 2);
-                decipheredData += data + " = " + GetUBXClassID(data) + "\r";
+                decipheredData += "ClassID = " + data + " = " + GetUBXClass(data) + "\r";
 
-                data = myData.Substring(6, 2);
-                decipheredData += data + " = " + GetUBXClassID(data) + "\r";
+                int payload = int.Parse(myData.Substring(10, 2) + myData.Substring(8, 2));
+               
+                // ID in the Class 
+                switch (myData.Substring(4, 2))
+                {
+                    //B562 05 01 0200 0601 0F38
+                    case "05":
+                        decipheredData += AckNakID(ReceivedData, payload);
+                        break;
+                    case "06":
+                        break;
 
+
+
+
+                }
+                
                 //payload length
-                data = myData.Substring(10, 2);
-                data += myData.Substring(8, 2);
-                decipheredData += "Length of payload = " + data + "\r";
+                //data = myData.Substring(10, 2);
+                //data += myData.Substring(8, 2);
+                //decipheredData += "Length of payload = " + data + "\r";
 
-                //Payload
-                // ToDo work out the payload.
-                decipheredData += "\rPayload = " + myData.Substring(12, myData.Length - 16) + "\r\r";
+                //Payload????
 
+               
                 //Checksum
                 decipheredData += myData.Substring(myData.Length - 4, 2) + " = Check Digit A\r";
                 decipheredData += myData.Substring(myData.Length - 2, 2) + " = Check Digit B\r";
 
 
-                uBlox_GPS.frmTerminal.Log(LogMsgType.Incoming, decipheredData + "\r", myRichTextBox);
+                frmTerminal.Log(LogMsgType.Incoming, decipheredData + "\r", myRichTextBox);
             }
         }
 
